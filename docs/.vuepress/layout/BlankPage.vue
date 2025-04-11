@@ -2,14 +2,10 @@
 import Header from '../component/public/Header.vue';
 import Footer from '../component/public/Footer.vue';
 import BackTop from '../component/public/BackTop.vue';
-import Banner from '../component/article/Banner.vue';
 import { provide, ref } from 'vue';
-import { usePageFrontmatter, usePageData } from 'vuepress/client';
-
-import defaultBanner from '@/image/default-banner.png';
+import { usePageFrontmatter } from 'vuepress/client';
 
 const frontmatter = usePageFrontmatter();
-const pageData = usePageData();
 
 const navBar = ref<{
   isTransparent: boolean | undefined;
@@ -30,14 +26,8 @@ provide('setNavBar', setNavBar);
 
 <template>
   <Header :is-transparent="navBar.isTransparent" :color="navBar.color" />
-  <Banner
-    :image="frontmatter.banner || defaultBanner"
-    :title="pageData.title"
-    :text="frontmatter.subtitle"
-    :tags="frontmatter.tags"
-  />
-  <main class="grow bg-base-white w-full my-16">
-    <Content class="prose mx-auto w-3/4" />
+  <main class="grow bg-base-white">
+    <Content class="special-page" />
   </main>
   <BackTop />
   <Footer />
@@ -45,35 +35,29 @@ provide('setNavBar', setNavBar);
 
 <style lang="scss">
 main {
-  .prose {
+  .container {
     @apply max-w-7xl md:mx-auto;
     h2 {
       font-family: var(--font-ysumc);
       @apply text-3xl md:text-4xl mb-4;
     }
 
-    h1 {
-      display: none;
-    }
-
-    a {
-      text-decoration-thickness: 2.5px;
-    }
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      a {
-        text-decoration: none;
-      }
-    }
-
     p {
       @apply text-base md:text-lg;
     }
   }
+
+  .special-page {
+    .center-block {
+      @apply w-full text-center py-14 px-6;
+      h2 {
+        @apply mb-10;
+      }
+    }
+  }
 }
+
+//h1,h2,h3,h4,h5,h6 {
+//  @apply pt-16;
+//}
 </style>

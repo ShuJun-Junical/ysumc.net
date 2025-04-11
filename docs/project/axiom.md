@@ -1,15 +1,3 @@
----
-date: 2022-04-01
-tags:
-  - 燕山大学
-  - 复原计划
-  - 大项目
-subtitle: 三千一百万方块打造的虚拟校园
----
-<script setup>
-import TextCard from '@/component/TextCard.vue'
-</script>
-
 
 > 感谢闽高联 AB 帮助我将这篇教程转移至 Github Repository.
 > 本教程作者 某个草 ，原文位置 https://hi-ysumc.feishu.cn/wiki/QDJBwtCBEi5eLakfWCvcRtErnvb?from=from_copylink ，请勿二次转载。
@@ -19,27 +7,11 @@ import TextCard from '@/component/TextCard.vue'
 
 > [!warning]
 >
+> **因为markdown语法不能很好地囊括飞书的富文本体系，所以某些部分会有删改或重新布局。这并不会影响到教程的完整性。**
+>
+> **若您想参考完整教程，请前往上方链接。**
 
 
-<TextCard title="“🐶”">
-因为markdown语法不能很好地囊括飞书的富文本体系，所以某些部分会有删改或重新布局。这并不会影响到教程的完整性。<br />
-若您想参考完整教程，请前往上方链接。
-</TextCard>
-
-<TextCard>
-因为markdown语法不能很好地囊括飞书的富文本体系，所以某些部分会有删改或重新布局。这并不会影响到教程的完整性。<br />
-若您想参考完整教程，请前往上方链接。
-</TextCard>
-
-<TextCard dark title="重要">
-因为markdown语法不能很好地囊括飞书的富文本体系，所以某些部分会有删改或重新布局。这并不会影响到教程的完整性。<br />
-若您想参考完整教程，请前往上方链接。
-</TextCard>
-
-<TextCard color="red" title="“⚠️”">
-因为markdown语法不能很好地囊括飞书的富文本体系，所以某些部分会有删改或重新布局。这并不会影响到教程的完整性。<br />
-若您想参考完整教程，请前往上方链接。
-</TextCard>
 
 # Axiom 的基础科普与使用方法
 
@@ -72,19 +44,19 @@ Axiom 会在创造模式的物品栏中增加一个“功能”栏位，这代�
 
 
 
-<!-- <img src="static/NWxwbhOLXownLkx5pckcP0djn0e.png" style="zoom:50%;" /> -->
+<img src="static/NWxwbhOLXownLkx5pckcP0djn0e.png" style="zoom:50%;" />
 
 **游戏内功能选择**
 当玩家物品栏的选择光标在“功能”栏位上时，按住 `LAlt` 键，可以呼出 Axiom 的游戏内功能选择菜单，松开 `LAlt` 键菜单即关闭。
 
-<!-- <img src="static/DTACbBzWnoQmSsxOOPccHTRvn5f.png" style="zoom:50%;" /> -->
+<img src="static/DTACbBzWnoQmSsxOOPccHTRvn5f.png" style="zoom:50%;" />
 
 **游戏内编辑选项**
 当玩家物品栏的选择光标不在“功能”栏位上时，按住 `LAlt` 键，可以呼出 Axiom 的创造模式附加菜单，松开 `LAlt` 键菜单即关闭。
 
 
 
-<!-- <img src="static/UCW3beI0noFTgGxHFxrcTzz7nUe.png" style="zoom:50%;" /> -->
+<img src="static/UCW3beI0noFTgGxHFxrcTzz7nUe.png" style="zoom:50%;" />
 
 如果你想了解更多，请参看本知识库的《游戏内编辑功能》。
 
@@ -100,7 +72,7 @@ Axiom 最具特色的功能就是嵌入在游戏中，类似于游戏引擎或�
 
 按下 `Rshift` 键，即可进入 Axiom 的编辑器功能。再次按下 `Rshift` 键退出该功能。
 
-<!-- <img src="static/Idafbu9w3oeK8rxkeXVcPXkAnfe.png" style="zoom: 33%;" /> -->
+<img src="static/Idafbu9w3oeK8rxkeXVcPXkAnfe.png" style="zoom: 33%;" />
 
 ## 展示实体编辑功能
 
@@ -112,7 +84,7 @@ Axiom 最具特色的功能就是嵌入在游戏中，类似于游戏引擎或�
 
 如果你想了解更多，请参看《展示实体编辑功能》。
 
-<!-- <img src="static/YpU6bfBvsokL40xf53jcgJponTc.png" style="zoom: 67%;" /> -->
+<img src="static/YpU6bfBvsokL40xf53jcgJponTc.png" style="zoom: 67%;" />
 
 
 
@@ -224,6 +196,6 @@ Axiom 最独特的自然是基于 imGUI 的图形操作界面了，在此之前�
 
 （注：除原生多人游戏支持外，商业许可版权与社区版功能没有区别，您并不需要因为某些特殊功能而去购买商业许可版权。）
 
-## 还有一件事情：Axiom 的全部操作均可用 `Ctrl`+`Z` 撤销。
+# 还有一件事情：Axiom 的全部操作均可用 `Ctrl`+`Z` 撤销。
 
 多爽啊这！

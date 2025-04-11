@@ -16,6 +16,8 @@ const props = defineProps<{
   text?: string
   isVideo?: boolean
   backupImg?: string
+  fullHight?: boolean
+  tags?: string[]
 }>()
 
 onMounted(() => {
@@ -65,7 +67,8 @@ function handleScroll() {
 <template>
   <div class="w-full relative overflow-hidden" ref="target">
     <div
-        class="relative h-dvh jarallax flex items-center justify-center"
+        class="relative jarallax flex items-end justify-left pl-32 pb-16"
+        :class="props.fullHight ? 'h-dvh' : 'h-96'"
         ref="jarallaxItem"
     >
       <img
@@ -75,9 +78,18 @@ function handleScroll() {
           :style="props.dark ? `filter: brightness(${props.dark})` : ''"
           alt="hero image"
       />
-      <div v-if="title || text" class="text-white text-center">
+      <div v-if="title || text" class="text-white">
         <h1 v-if="title" class="text-5xl font-ysumc">{{ props.title }}</h1>
-        <p v-if="text" v-html="props.text" class="text-xl pt-6"></p>
+        <p v-if="text" v-html="props.text" class="text-xl mt-4"></p>
+        <div class="flex flex-wrap mt-6 gap-4">
+          <span
+              v-for="tag in props.tags"
+              :key="tag"
+              class="inline-block bg-white text-black rounded px-4 py-2 font-semibold"
+          >
+            {{ tag }}
+          </span>
+        </div>
       </div>
       <slot v-else></slot>
     </div>
